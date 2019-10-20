@@ -13,22 +13,6 @@
 
 #define bluetooth Serial1;
 
-//data vb: M255,R0,S0,L1,Ih
-//M(otor):     pwm value (0 - 255)
-//R(everse):   boolean
-//S(teering):  l(eft), 0 (center), r(ight)
-//L(ight):     1 (on), 0 (off)
-//I(ndicator): l(eft indicator), r(ight indicator), h(azard lights), o(ff)
-/*String dataIn;
-
-enum steerDir { Center, Left, Right };
-typedef struct btData{
-  byte motor;
-  bool motorDir;
-  int steer;
-  byte lights;
-};*/
-
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(115200);
@@ -51,6 +35,7 @@ void setup() {
 }
 
 void loop() {
+  vTaskDelay(1000);
   // put your main code here, to run repeatedly:
 }
 
